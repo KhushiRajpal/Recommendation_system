@@ -1,9 +1,10 @@
 //This file holds any configuration variables we may need
 //'config.js' is usually ignored by git to protect sensitive information, such as your database's username and password
-require('dotenv').config();
+//require('dotenv').config();
 
 module.exports = {
-    db: {
-        uri: process.env.MONGO_STR, //place the URI of your mongo database here.
-    }
+    
+        	mongoURI: "mongodb+srv://Khushi:test123@cluster0.pdqub.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", 
+			secretOrKey:"secret"
+    
 };

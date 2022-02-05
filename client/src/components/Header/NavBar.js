@@ -1,28 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './NavBar.css';
-
-const NavBar = () => {
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+class Navbar extends Component {
+  render() {
     return (
-        <div className = "header">
-            {/* Logo */}
-            <Link className = "nav-title" to="/">
-                <img className = "nav-logo" src={ "/logo192.png" } alt="React logo" />
+      <div className="navbar-fixed">
+        <nav className="z-depth-0">
+          <div className="nav-wrapper white">
+            <Link
+              to="/"
+              style={{
+                fontFamily: "monospace"
+              }}
+              className="col s5 brand-logo center black-text"
+            >
+              <i className="material-icons">code</i>
+              RightNote
             </Link>
+          </div>
+        </nav>
+      </div>
+    );
+  }
+}
+export default Navbar;
 
-            {/* Page Links */}
-            <div className = "nav-items">
-                <Link className = "nav-link" to='/Home'>Home</Link>
-                <Link className = "nav-link" to='/Register'>Extra Page</Link>
-                <a className = "nav-link" target='_blank' rel="noopener noreferrer" href="https://reactjs.org/docs/getting-started.html">
-                    React Docs
-                </a>
-                <a className = "nav-link" target="_blank" rel="noopener noreferrer" href="https://reactjs.org/tutorial/tutorial.html">React Tutorial</a>
-                <a className = "nav-link" target="_blank" rel="noopener norefferer" href="https://nodejs.org/en/docs/">Node Docs</a>
-            </div>
-
-        </div>
-    )
-};
-
-export default NavBar;
